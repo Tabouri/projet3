@@ -1,0 +1,321 @@
+@import "menu-item.scss"; //call menu-item__link
+@import "restaurant.scss";
+$principal-color: rgba(250, 249, 249, 0.911);
+body {
+  font-family: sans-serif;
+}
+.card-click {
+  text-decoration: none;
+  width: 0px;
+}
+a {
+  text-decoration: none;
+}
+.logo-img {
+  height: 8vh;
+}
+header {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.location {
+  background-color: rgba(235, 235, 235, 0.911);
+
+  padding: 20px;
+  margin: 30px -10px;
+}
+.location a {
+  text-decoration: none;
+  color: black;
+  font-size: 21px;
+}
+.hero {
+  text-align: center;
+  background-color: $principal-color;
+  margin: -30px -10px;
+  padding: 20px;
+  font-size: 25px;
+}
+h1 {
+  font-size: 42px;
+}
+.p-hero {
+  color: grey;
+}
+@mixin btn-color {
+  border: 2px transparent;
+  background-color: rgb(166, 93, 189);
+}
+.btn {
+  display: inline-block;
+  @include btn-color();
+  border-radius: 30px;
+
+  padding: 15px;
+}
+.btn a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  padding: 5px;
+}
+
+.fonction {
+  margin-left: 30px;
+}
+//**
+
+span {
+  position: absolute;
+
+  left: -20px;
+  top: 20px;
+  border: 2px transparent;
+  background-color: rgb(166, 93, 189);
+  border-radius: 35px;
+  padding: 10px 14px;
+  color: white;
+}
+
+.fonction ul {
+  text-align: center;
+  margin-right: 60px;
+}
+i {
+  color: grey;
+}
+
+.new {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 18px;
+  border: 1 solid transparent;
+  background-color: rgb(153, 224, 221);
+  color: rgb(31, 165, 31);
+  padding: 15px;
+  border-radius: 3px;
+}
+h1 {
+  margin-left: 30px;
+}
+h2 {
+  padding-left: 10px;
+  color: black;
+}
+p {
+  font-size: 20px;
+  color: black;
+  padding-left: 10px;
+}
+.fa-heart {
+  font-size: 40px;
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
+.fa-heart::selection {
+  background-color: mediumorchid;
+}
+.white-logo path {
+  fill: white;
+}
+.white-logo {
+  padding-top: 60px;
+  padding-left: 22px;
+}
+footer {
+  background-color: #3d3838;
+  height: 60vh;
+  margin: -10px;
+}
+/*.white-logo path {
+  fill: white;
+}
+.white-logo {
+  position: absolute;
+
+  right: 70px;
+  padding-top: 228px;
+}*/
+.prop {
+  color: white;
+  padding-left: 35px;
+  font-size: 20px;
+}
+//**Palette du goût**//
+.img-fond {
+  position: relative;
+  height: 76vh;
+
+  width: 103%;
+
+  margin-left: -8px;
+  margin-top: 15px;
+  margin-bottom: -75px;
+  object-fit: cover;
+}
+.fa-arrow-left {
+  font-size: 30px;
+  position: absolute;
+  left: 30px;
+  top: 50px;
+}
+.menu {
+  background-color: rgb(235, 235, 235);
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  margin: -10px;
+  position: relative;
+  margin-bottom: -29px;
+}
+
+.title {
+  display: flex;
+
+  justify-content: space-between;
+  padding-top: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+/*.fa-heart {
+  position: relative;
+  top: 40px;
+  right: 30px;
+}*/
+
+//***Les entrées***//
+.entree {
+  margin-left: 15px;
+  margin-bottom: 50px;
+}
+.entree-title {
+  font-weight: lighter;
+  font-size: 20px;
+  margin-left: 8px;
+  border-bottom: rgb(153, 224, 221) solid 4px;
+
+  width: 55px;
+  padding-bottom: 15px;
+}
+.choix {
+  border: 1px solid transparent;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px 2px #d7cdcd;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.sum {
+  position: relative;
+  right: 20px;
+  top: 40px;
+}
+#btn {
+  margin-left: 160px;
+  width: 140px;
+  padding: 22px;
+  border-radius: 35px;
+  margin-bottom: 80px;
+}
+
+//***version mobile**//
+@media screen and (min-width: 769px) {
+  .fonction ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  h1 {
+    margin-top: 70px;
+    margin-left: 50px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 80px;
+    gap: 30px;
+  }
+  #restaurant-title {
+    margin-left: 90px;
+  }
+  footer {
+    display: flex;
+  }
+  .menu-footer {
+    display: flex;
+    position: absolute;
+
+    right: 340px;
+    padding-top: 220px;
+  }
+  .white-logo path {
+    fill: white;
+  }
+  .white-logo {
+    position: absolute;
+
+    right: 70px;
+    padding-top: 228px;
+  }
+  .img-fond {
+    width: 102%;
+    object-fit: cover;
+  }
+  .menu {
+    margin-bottom: 10px;
+    width: 100vh;
+    margin-left: 18%;
+  }
+
+  #btn {
+    margin-left: 300px;
+  }
+  .fa-regular,
+  .far {
+    font-weight: 400;
+    position: absolute;
+    top: 69%;
+    left: 75%;
+    margin-top: 40px;
+    margin-right: 220px;
+  }
+}
+@media screen and (min-width: 770px) and (max-width: 986px) {
+  .cards {
+    margin-left: 43px;
+  }
+
+  .menu {
+    width: 100vh;
+    margin-left: 8%;
+  }
+  .fa-regular,
+  .far {
+    font-weight: 400;
+    position: absolute;
+    top: 69%;
+    left: 75%;
+  }
+}
+
+@media screen and (min-width: 1108px) {
+  .cards {
+    margin-left: 43px;
+  }
+
+  .menu {
+    margin-bottom: 10px;
+    width: 130vh;
+    margin-left: 18%;
+  }
+  .fa-regular,
+  .far {
+    font-weight: 400;
+    position: absolute;
+    top: 69%;
+    left: 75%;
+  }
+}
