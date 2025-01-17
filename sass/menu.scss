@@ -1,0 +1,19 @@
+.menu {
+  background-color: rgb(235, 235, 235);
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  margin-top: -85px;
+  position: relative;
+  &-btn {
+    border: 2px solid black;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .menu {
+    max-width: 1055px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}

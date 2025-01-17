@@ -1,73 +1,48 @@
 .restaurant {
-  background-color: rgba(250, 249, 249, 0.911);
-  height: 280vh;
-  margin: 0px -10px 0px -8px;
-  padding-top: 10px;
-  margin-bottom: -20px;
-
-  &-card {
-    border: 2px solid transparent;
-    background-color: white;
-    width: 90%;
-    height: 58vh;
-    border-radius: 15px;
-    line-height: 10px;
-    margin-left: 31px;
-    position: relative;
-    margin-top: 20px;
-  }
-  &-nom {
-    display: flex;
-
-    justify-content: space-between;
-    padding: 10px;
-  }
-
+  position: relative;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 20px;
   &-img {
-    height: 40vh;
-    width: 100%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    object-fit: cover;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
   }
-}
-@media screen and (min-width: 769px) {
-  .restaurant {
-    height: 200vh;
-    margin-bottom: -70px;
-    &-card {
-      width: 60vh;
-    }
-    &-img {
-      width: 60vh;
-    }
+
+  &-nom {
+    padding: 16px;
+    display: flex;
   }
-}
-
-@media screen and (min-width: 770px) and (max-width: 986px) {
-  .restaurant {
-    height: 200vh;
-
-    margin-bottom: -70px;
-    &-card {
-      width: 45vh;
-    }
-    &-img {
-      width: 45vh;
-    }
+  &-main {
+    flex-grow: 1;
+    line-height: 2rem;
   }
-}
-
-@media screen and (min-width: 1108px) {
-  .restaurant {
-    height: 200vh;
-
-    margin-bottom: -70px;
-    &-card {
-      width: 80vh;
+  &-img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  /*&-heart:hover {
+    display: none !important;
+  }
+  &-heart-plein:hover {
+    display: inline-block !important;
+    color: aqua;
+  }
+  &-heart-plein {
+    display: none !important;
+  }*/
+  &-heart-container {
+    .restaurant-heart-plein {
+      display: none;
     }
-    &-img {
-      width: 80vh;
+    &:hover {
+      .restaurant-heart-plein {
+        display: inline-block;
+        color: rgb(166, 93, 189);
+      }
+      .restaurant-heart {
+        display: none;
+      }
     }
   }
 }
