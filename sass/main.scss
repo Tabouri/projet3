@@ -19,6 +19,18 @@ body {
   z-index: 9999;
   animation: fadeOut 3s forwards;
 }
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .lettre {
   color: #484848;
   font-size: 80px;
@@ -38,18 +50,6 @@ body {
   100% {
     color: #fff900;
     text-shadow: 0 0 7px #fff900;
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
   }
 }
 
@@ -180,7 +180,7 @@ i {
   top: 10px;
   right: 20px;
   font-size: 18px;
-  border: 1 solid transparent;
+  border: 1px solid transparent;
   background-color: rgb(153, 224, 221);
   color: rgb(31, 165, 31);
   padding: 15px;
@@ -211,8 +211,7 @@ footer {
 
 .prop {
   color: white;
-  padding-left: 35px;
-  font-size: 20px;
+  font-size: 16px;
 }
 .img-fond {
   position: relative;
@@ -235,8 +234,10 @@ footer {
 }
 .title {
   padding: 38px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
   font-size: 33px;
+  text-align: center;
 }
 
 .entree {
@@ -245,7 +246,7 @@ footer {
 .entree-title {
   font-weight: lighter;
   font-size: 20px;
-
+  padding-left: 0;
   border-bottom: rgb(153, 224, 221) solid 4px;
 
   width: 55px;
@@ -305,6 +306,7 @@ footer {
   &__icon {
     transition: transform $check-animation-duration;
     font-size: $check-icon-size;
+    color: white;
   }
 
   &__title {
@@ -373,7 +375,14 @@ footer {
   border-radius: 35px;
 }
 
-//***version mobile**//
+.menu-footer {
+  padding-left: 22px;
+  &__icone {
+    color: white;
+  }
+}
+
+//***version desktop**//
 @media screen and (min-width: 769px) {
   .contenaire {
     display: grid;
@@ -393,9 +402,13 @@ footer {
   .menu-footer {
     display: flex;
     position: absolute;
-
+    width: 661px;
+    gap: 32px;
     right: 340px;
     padding-top: 220px;
+    &__icone {
+      color: white;
+    }
   }
   .white-logo path {
     fill: white;

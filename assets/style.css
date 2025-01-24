@@ -24,16 +24,6 @@
   margin-bottom: 20px;
   background-color: white;
   border-radius: 20px;
-  /*&-heart:hover {
-    display: none !important;
-  }
-  &-heart-plein:hover {
-    display: inline-block !important;
-    color: aqua;
-  }
-  &-heart-plein {
-    display: none !important;
-  }*/
 }
 .restaurant-img {
   height: 250px;
@@ -53,14 +43,14 @@
   border-top-right-radius: 20px;
 }
 .restaurant-heart-container .restaurant-heart-plein {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  right: 16px;
 }
 .restaurant-heart-container:hover .restaurant-heart-plein {
-  display: inline-block;
   color: rgb(166, 93, 189);
-}
-.restaurant-heart-container:hover .restaurant-heart {
-  display: none;
+  transition: ease 0.6s;
+  opacity: 1;
 }
 
 .menu {
@@ -99,6 +89,18 @@ body {
   animation: fadeOut 3s forwards;
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .lettre {
   color: #484848;
   font-size: 80px;
@@ -121,31 +123,6 @@ body {
     text-shadow: 0 0 7px #fff900;
   }
 }
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-/*.dot {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #000;
-  margin: 0 15px;
-  animation: loader infinite 0.3s alternate;
-}*/
-/*.menu {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}*/
 .enter {
   opacity: 0;
   transform: translateY(20px);
@@ -274,7 +251,7 @@ i {
   top: 10px;
   right: 20px;
   font-size: 18px;
-  border: 1 solid transparent;
+  border: 1px solid transparent;
   background-color: rgb(153, 224, 221);
   color: rgb(31, 165, 31);
   padding: 15px;
@@ -308,8 +285,7 @@ footer {
 
 .prop {
   color: white;
-  padding-left: 35px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .img-fond {
@@ -333,8 +309,10 @@ footer {
 
 .title {
   padding: 38px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
   font-size: 33px;
+  text-align: center;
 }
 
 .entree {
@@ -344,6 +322,7 @@ footer {
 .entree-title {
   font-weight: lighter;
   font-size: 20px;
+  padding-left: 0;
   border-bottom: rgb(153, 224, 221) solid 4px;
   width: 55px;
   padding-bottom: 15px;
@@ -365,19 +344,6 @@ footer {
   justify-content: space-between;
   cursor: pointer;
   overflow: hidden;
-  /*&-icon {
-    flex: 0 0 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: red;
-    color: white;
-  }
-  &:hover {
-    &-icon {
-      width: 50px;
-    }
-  }*/
 }
 
 .container {
@@ -387,9 +353,6 @@ footer {
   border-radius: 12px;
 }
 
-/*.container1 {
-  width: 375px;
-}*/
 .recipe-card {
   background: white;
   border-radius: 12px;
@@ -413,6 +376,7 @@ footer {
 .recipe-card__icon {
   transition: transform 0.6s;
   font-size: 24px;
+  color: white;
 }
 .recipe-card__title {
   font-size: 1.1rem;
@@ -468,6 +432,13 @@ footer {
   border-radius: 35px;
 }
 
+.menu-footer {
+  padding-left: 22px;
+}
+.menu-footer__icone {
+  color: white;
+}
+
 @media screen and (min-width: 769px) {
   .contenaire {
     display: grid;
@@ -484,8 +455,13 @@ footer {
   .menu-footer {
     display: flex;
     position: absolute;
+    width: 661px;
+    gap: 32px;
     right: 340px;
     padding-top: 220px;
+  }
+  .menu-footer__icone {
+    color: white;
   }
   .white-logo path {
     fill: white;
