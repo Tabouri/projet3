@@ -13,6 +13,9 @@
   font-weight: bold;
   color: black;
 }
+.menu-item__link i {
+  color: #9356dc;
+}
 
 @media screen and (min-width: 769px) {
   .menu-item {
@@ -74,6 +77,7 @@
 }
 body {
   font-family: sans-serif;
+  font-family: Roboto;
   margin: 0;
 }
 
@@ -227,7 +231,7 @@ span {
   right: 95%;
   top: 20px;
   border: 2px transparent;
-  background-color: rgb(166, 93, 189);
+  background-color: #9356dc;
   border-radius: 35px;
   padding: 10px 14px;
   color: white;
@@ -271,16 +275,6 @@ p {
 
 .white-logo path {
   fill: white;
-}
-
-.white-logo {
-  padding-top: 60px;
-  padding-left: 22px;
-}
-
-footer {
-  background-color: #3d3838;
-  height: 60vh;
 }
 
 .prop {
@@ -432,9 +426,6 @@ footer {
   border-radius: 35px;
 }
 
-.menu-footer {
-  padding-left: 22px;
-}
 .menu-footer__icone {
   color: white;
 }
@@ -449,16 +440,11 @@ footer {
   .fonction ul {
     display: flex;
   }
-  footer {
-    display: flex;
-  }
   .menu-footer {
     display: flex;
-    position: absolute;
     width: 661px;
     gap: 32px;
     right: 340px;
-    padding-top: 220px;
   }
   .menu-footer__icone {
     color: white;
@@ -467,9 +453,7 @@ footer {
     fill: white;
   }
   .white-logo {
-    position: absolute;
-    right: 70px;
-    padding-top: 228px;
+    height: 27px;
   }
   .img-fond {
     width: 100%;
@@ -479,6 +463,23 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+footer {
+  background-color: #3d3838;
+  display: flex;
+  padding: 35px 25px 10px 25px;
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 769px) {
+  footer {
+    align-items: center;
+    justify-content: flex-end;
+    gap: 100px;
+    flex-direction: row;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
