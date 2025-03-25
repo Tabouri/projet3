@@ -146,6 +146,33 @@ header {
   }
 }
 
+.fas {
+  cursor: pointer;
+  transition: opacity 0.7s ease;
+}
+
+.solid-heart {
+  opacity: 0;
+  position: relative;
+  right: 37px;
+  pointer-events: none; /* Empêche l'icône pleine d'être interactive quand elle est cachée */
+}
+
+/* Lorsque l'on survole l'icône vide, on affiche l'icône pleine */
+.empty-heart:hover {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.empty-heart:hover + .solid-heart {
+  background: linear-gradient(to right, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  transition: ease 0.6s;
+  opacity: 1;
+  //pointer-events: all; /* Permet à l'icône pleine de devenir interactive */
+}
+
 .btn a {
   text-decoration: none;
   color: white;
